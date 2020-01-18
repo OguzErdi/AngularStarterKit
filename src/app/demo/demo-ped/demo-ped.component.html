@@ -1,0 +1,15 @@
+<div class="container">
+  <input
+    id="name"
+    name="name"
+    class="form-control"
+    required
+    minlength="4"
+    [(ngModel)]="hero.name"
+    #name="ngModel"
+    [appPatternsValidation]="patterns"
+    autocomplete="off"
+  />
+
+  <app-error-message [control]="name"></app-error-message>
+</div>

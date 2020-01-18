@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DemoPedComponent } from './demo/demo-ped/demo-ped.component';
 
 const routes: Routes = [
   // Fallback when no prior route is matched
@@ -11,4 +12,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -15,6 +15,10 @@ import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DemoPedComponent } from './demo/demo-ped/demo-ped.component';
+import { PatternValidationDirective } from './custom/directives/pattern-validation.directive';
+import { DemoPedModule } from './demo/demo-ped/demo-ped.module';
+import { ErrorMessageComponent } from './custom/components/error-message/error-message.component';
 
 @NgModule({
   imports: [
@@ -30,11 +34,11 @@ import { AppRoutingModule } from './app-routing.module';
     HomeModule,
     AboutModule,
     LoginModule,
+    DemoPedModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
-  declarations: [AppComponent],
-  providers: [
-  ],
+  declarations: [AppComponent, DemoPedComponent, PatternValidationDirective, ErrorMessageComponent],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

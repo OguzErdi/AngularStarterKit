@@ -1,0 +1,14 @@
+<div *ngIf="control.invalid && (control.dirty || control.touched)" class="alert alert-danger">
+  <div *ngIf="control.errors.required">
+    Bu alan zorunludur.
+  </div>
+
+  <div *ngIf="!control.errors.required && control.errors.minlength">
+    Bu alana en az {{ control.errors.minlength.requiredLength }} uzunluğunda olmalıdır.
+  </div>
+
+  <div *ngIf="!control.errors.required && !control.errors.minlength && control.errors.patternsValidation">
+    {{ control.errors.patternsValidation.errorMessage }}
+  </div>
+</div>
+<pre> {{ control.errors | json }} </pre>
